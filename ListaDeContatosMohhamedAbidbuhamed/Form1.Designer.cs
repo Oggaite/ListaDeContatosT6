@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxSobrenome = new System.Windows.Forms.TextBox();
+            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.listBoxContato = new System.Windows.Forms.ListBox();
+            this.buttonContato = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -73,50 +73,51 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefone";
             // 
-            // textBox1
+            // textBoxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(172, 66);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 26);
-            this.textBox1.TabIndex = 3;
+            this.textBoxNome.Location = new System.Drawing.Point(172, 66);
+            this.textBoxNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(292, 26);
+            this.textBoxNome.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxSobrenome
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 122);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(292, 26);
-            this.textBox2.TabIndex = 4;
+            this.textBoxSobrenome.Location = new System.Drawing.Point(172, 122);
+            this.textBoxSobrenome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxSobrenome.Name = "textBoxSobrenome";
+            this.textBoxSobrenome.Size = new System.Drawing.Size(292, 26);
+            this.textBoxSobrenome.TabIndex = 4;
             // 
-            // textBox3
+            // textBoxTelefone
             // 
-            this.textBox3.Location = new System.Drawing.Point(172, 177);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(292, 26);
-            this.textBox3.TabIndex = 5;
+            this.textBoxTelefone.Location = new System.Drawing.Point(172, 177);
+            this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxTelefone.Name = "textBoxTelefone";
+            this.textBoxTelefone.Size = new System.Drawing.Size(292, 26);
+            this.textBoxTelefone.TabIndex = 5;
             // 
-            // listBox1
+            // listBoxContato
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(620, 45);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(520, 604);
-            this.listBox1.TabIndex = 6;
+            this.listBoxContato.FormattingEnabled = true;
+            this.listBoxContato.ItemHeight = 20;
+            this.listBoxContato.Location = new System.Drawing.Point(620, 45);
+            this.listBoxContato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listBoxContato.Name = "listBoxContato";
+            this.listBoxContato.Size = new System.Drawing.Size(520, 604);
+            this.listBoxContato.TabIndex = 6;
             // 
-            // button1
+            // buttonContato
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(82, 432);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(384, 132);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonContato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonContato.Location = new System.Drawing.Point(82, 432);
+            this.buttonContato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonContato.Name = "buttonContato";
+            this.buttonContato.Size = new System.Drawing.Size(384, 132);
+            this.buttonContato.TabIndex = 7;
+            this.buttonContato.Text = "Incluir Contato";
+            this.buttonContato.UseVisualStyleBackColor = false;
+            this.buttonContato.Click += new System.EventHandler(this.buttonContato_Click);
             // 
             // Form1
             // 
@@ -124,11 +125,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBoxContato);
+            this.Controls.Add(this.buttonContato);
+            this.Controls.Add(this.textBoxTelefone);
+            this.Controls.Add(this.textBoxSobrenome);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -146,11 +147,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxNome;
+        private System.Windows.Forms.TextBox textBoxSobrenome;
+        private System.Windows.Forms.TextBox textBoxTelefone;
+        private System.Windows.Forms.ListBox listBoxContato;
+        private System.Windows.Forms.Button buttonContato;
     }
 }
 
