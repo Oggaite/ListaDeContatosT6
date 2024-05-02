@@ -41,9 +41,35 @@ namespace ListaDeContatosMohhamedAbidbuhamed
 
         private void Ler()
         {
-            StreamReader ler = new StreamReader("listaDeContatos.txt");
+            StreamReader ler = new StreamReader("Contatos.txt");
 
             listaDeContatos = new Contato[Convert.ToInt32(ler.ReadLine())];
+
+            for (int x = 0; x < listaDeContatos.Length; x++)
+            {
+                listaDeContatos[x] = new Contato();
+                listaDeContatos[x].Nome = ler.ReadLine();
+                listaDeContatos[x].Sobrenome = ler.ReadLine();
+                listaDeContatos[x].Telefone = ler.ReadLine();
+            }
+            ler.Close();
+        }
+
+        private void Exbir()
+        {
+            listBoxContato.Items.Clear();
+
+            for (int x = 0; x <listaDeContatos.Length; x++)
+            {
+                listBoxContato.Items.Add(listaDeContatos[x].ToString());
+            }
+        }
+
+        private void limparCampos()
+        {
+            textBoxNome.Text = String.Empty;
+            textBoxSobrenome.Text = String.Empty;  
+            textBoxTelefone.Text = String.Empty;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -65,6 +91,22 @@ namespace ListaDeContatosMohhamedAbidbuhamed
             contato.Telefone = textBoxTelefone.Text;
 
             listBoxContato.Items.Add(contato.ToString());
+
+            Escrever(contato);
+            Ler();
+            Exbir();
+            limparCampos();
+        }
+
+        private void listBoxContato_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Ler();
+            Exbir();
         }
     }
 }
